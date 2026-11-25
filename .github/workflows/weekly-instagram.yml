@@ -24,6 +24,9 @@ jobs:
       - name: Data della settimana
         run: echo "WEEK=$(date -u +%F)" >> "$GITHUB_ENV"
 
+      - name: Estrai fotogrammi dai video caricati
+        run: ./scripts/extract_frames.sh
+
       - uses: anthropics/claude-code-action@v1
         with:
           # Autenticazione con l'abbonamento Claude (token creato con `claude setup-token`)
@@ -42,6 +45,9 @@ jobs:
 
           prompt: |
             Segui CLAUDE.md alla lettera. Oggi è ${{ env.WEEK }}. NON pubblicare nulla: solo file e una Pull Request.
+            Il nome del brand è SOLO TradeGPT: mai MarketLens (vecchio nome) in nessun testo.
+            Guarda (Read) gli screenshot in brand/screenshot/ e brand/uploads/screenshot/ e i fotogrammi dei
+            video in brand/uploads/_frames/ (se esistono), più brand/uploads/NOTE.md. Usa e cita solo ciò che vedi.
             Lavora in modo efficiente: raggruppa più chiamate di strumenti nello stesso turno
             (hai pochi turni), scrivi i file in blocco e non rileggere ciò che hai appena scritto.
 

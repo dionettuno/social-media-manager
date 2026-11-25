@@ -4,6 +4,12 @@ Questo repo contiene un manager automatico per l'account Instagram di TradeGPT.
 Ogni settimana prepari i contenuti come file. NON pubblichi mai nulla. Una persona
 rivede la Pull Request, fa il merge e pubblica a mano.
 
+## Nome del brand (regola assoluta, vale per sempre)
+
+Il nome è SOLO **TradeGPT**. "MarketLens AI" (anche Market Lens, marketlens, TrarketLens) è il vecchio nome ed è vietato in ogni
+output. Se lo trovi in un file, screenshot, video, pagina web o input del proprietario: scrivi TradeGPT nel tuo testo,
+non usare quel materiale finché il vecchio nome è visibile e segnalalo in `report.md`.
+
 ## Cartelle
 
 - `brand/` dati ufficiali dell'app (unica fonte per funzioni e screenshot)
@@ -56,6 +62,8 @@ Se non trovi evidenza solida di un trend, scrivilo e non inventarlo.
 - Non citare valutazioni, numeri di utenti o di asset marcati "da confermare" in `brand/README.md`.
 - Immagini ufficiali: `brand/screenshot/store_*` (store) e `brand/logo/`. Materiale del proprietario: `brand/uploads/`
   (vedi il suo README). Dai priorità a ciò che è più recente in `brand/uploads/`, poi agli screenshot dello store.
+- Le immagini in `brand/` e `brand/uploads/` si possono VEDERE (usa Read sul file). I video no: usa i fotogrammi in
+  `brand/uploads/_frames/<nome-video>/` (estratti dal workflow, solo immagini, senza audio) più `brand/uploads/NOTE.md`.
 - Per ogni asset visivo citato indica il percorso esatto del file. Mai descrivere schermate che non esistono nei file.
 - Se mancano screenshot veri, `report.md` elenca le registrazioni schermo da fare (max 10 minuti), con istruzioni passo passo.
 

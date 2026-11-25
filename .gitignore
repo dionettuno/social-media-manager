@@ -8,3 +8,4 @@ __pycache__/
 *.p12
 secrets*
 output/*/_work/
+brand/uploads/_frames/

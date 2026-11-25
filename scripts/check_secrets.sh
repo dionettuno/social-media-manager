@@ -8,4 +8,8 @@ if [ -n "$hits" ]; then
   echo "$hits" | sed -E 's/(:[0-9]+:).*/\1 [riga mascherata]/'
   exit 1
 fi
-echo "Nessun dato sensibile evidente."
+old=$(grep -rIniE "market[ _-]?lens|trarketlens" output 2>/dev/null || true)
+if [ -n "$old" ]; then
+  echo "VECCHIO NOME (MarketLens) trovato in output/: va sostituito con TradeGPT"; echo "$old" | cut -c1-160; exit 1
+fi
+echo "Nessun dato sensibile evidente, nome brand ok."

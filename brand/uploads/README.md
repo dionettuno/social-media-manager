@@ -13,5 +13,9 @@ Il repo è PUBBLICO: tutto ciò che metti qui è visibile a chiunque. Prima di c
 - Opzionale: una riga per file in `brand/uploads/NOTE.md` (cosa mostra, quale funzione, quale versione dell'app).
 
 Il manager usa solo ciò che trova qui o in `brand/`, e cita sempre il percorso del file.
-I video non vengono "guardati" dal manager: scrivi in `NOTE.md` cosa succede secondo per secondo (anche in 3 righe),
-così può scrivere script fedeli.
+## Cosa vede il manager
+- Screenshot: li vede davvero (legge le immagini) e descrive solo ciò che c'è.
+- Video: non può guardarli né sentirli. Prima di ogni esecuzione il workflow estrae 8 fotogrammi da ciascuno
+  dei 5 video più recenti (in `brand/uploads/_frames/`, non salvati nel repo) e il manager vede quelli.
+  Audio e movimento non li capisce: scrivi in `NOTE.md` cosa succede (anche 3 righe), così gli script restano fedeli.
+- I video servono soprattutto a te: i Reel proposti indicano QUALE registrazione usare e per quali secondi.

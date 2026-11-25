@@ -4,6 +4,15 @@ Fonti: scheda Google Play (id `com.vectordev.einsight`) e sito https://tradegpt-
 lette il 2026-11-25. Tutto ciò che non è qui è un `{{segnaposto}}`.
 I contenuti possono citare SOLO ciò che è scritto in questo file.
 
+## Nome (regola assoluta)
+
+- Il nome è SOLO **TradeGPT**. Il vecchio nome "MarketLens AI" (anche scritto Market Lens, marketlens, TrarketLens) non esiste più:
+  mai usarlo, mai citarlo, in nessun contenuto, caption, script, report o commento.
+- Se compare in un file, screenshot, registrazione o pagina web, sostituiscilo con TradeGPT nel testo prodotto,
+  non usare quel materiale se il vecchio nome è visibile, e segnalalo in `report.md`.
+- Residui noti da correggere alla fonte: testo piccolo nello screenshot "Ask. Analyze. Understand." su Google Play
+  e la chiave `marketLens_lang` nel codice di tradegpt-vector.com (non visibile agli utenti).
+
 ## Identità
 
 - **Nome app:** TradeGPT (titolo store: "TradeGPT – Stock Market: quotes, charts & technical analysis")
@@ -83,7 +92,7 @@ Tono: diretto, chiaro, educativo, zero hype, zero promesse di guadagno.
 | `brand/logo/tradegpt_logo.jpg` | Logo (esagono verde su bianco) | ok |
 | `brand/logo/app_icon_store.jpg` | Icona ufficiale dello store | ok |
 | `brand/screenshot/store_01_ai-market-intelligence.jpg` | UFFICIALE STORE. Dettaglio NVDA: prezzo, grafico 7D/1M/3M/6M/1Y, Technical Rating (con etichetta PREMIUM), livello di invalidazione e prezzo obiettivo, Asset Statistics (sentiment, momentum, volatilità) | ok |
-| `brand/screenshot/store_02_ask-analyze-understand.jpg` | UFFICIALE STORE. Chat AI ("How is SPY ETF performing today?"), Market Breadth, Key Drivers, bottoni Explain this / Compare assets | ok, ma la scritta in basso cita un altro nome ("...Lens AI"): ritagliare o evitare, vedi sotto |
+| `brand/screenshot/store_02_ask-analyze-understand.jpg` | UFFICIALE STORE. Chat AI ("How is SPY ETF performing today?"), Market Breadth, Key Drivers, bottoni Explain this / Compare assets | ok. Il vecchio nome nel testo piccolo in basso è stato corretto in "TradeGPT AI" (vedi Nome) |
 | `brand/screenshot/store_03_see-the-big-picture.jpg` | UFFICIALE STORE. Market Breadth: mercati globali, distribuzione performance giornaliera, Advancers/Decliners, Assets in Motion | ok |
 | `brand/screenshot/store_04_discover-emerging-opportunities.jpg` | UFFICIALE STORE. Home: Top Gainers, trend statisticamente positivi, Favorites, Top News | ok |
 | `brand/screenshot/store_05_your-daily-edge.jpg` | UFFICIALE STORE. Daily Brief: Algorithmic Radar (RSI, MACD, volumi, supporti/resistenze), Focus Watchlist | ok |
@@ -104,7 +113,8 @@ Avvertenze sugli screenshot ufficiali:
 - Contengono già il disclaimer "Fictitious data for illustrative purposes only. TradeGPT is an analytical tool and does not
   provide financial advice, brokerage, or order execution services." Se li mostri, lascia visibile il disclaimer o ripetilo.
 - Mostrano "price target" e "invalidation level": nel testo chiamali "statistical levels", mai obiettivi da seguire.
-- Nello screenshot 2 il testo piccolo in basso nomina un altro prodotto ("...Lens AI"). {{conferma se è un residuo di un vecchio nome}}
+- Nello screenshot 2 il testo piccolo in basso diceva "TrarketLens AI": corretto a mano in "TradeGPT AI" in questa copia.
+  L'immagine su Google Play va corretta alla fonte (vedi Nome).
 
 Le registrazioni schermo vere dell'app sono il materiale più importante: il manager le userà man mano che le carichi
 in `brand/uploads/`. Il report settimanale elenca quali registrare (max 10 minuti di lavoro).
