@@ -14,19 +14,19 @@ insieme a te: ti farò le domande nella prossima risposta.
 - **Name:** TradeGPT (brand account)
 - **Handle:** {{@handle}}
 - **What I do, in one sentence:** An app that puts quotes, charts, technical analysis, news and AI-assisted market tools for stocks, crypto, ETFs and forex in one place.
-- **Who I am talking to:** {{retail traders and investors, beginner to intermediate: conferma}}
-- **What I sell:** {{free download / subscription: conferma}}
+- **Who I am talking to:** retail traders and investors, beginner to intermediate, curious about technical analysis, stocks, crypto, ETFs and forex (worldwide)
+- **What I sell:** a free app (Android now, iOS soon) with optional Premium and Ultra subscriptions
 
 ## What I sound like
 
 - **Three of my own reels or captions that sound most like me:** {{incolla 3 esempi, oppure nessuno: allora uso il tono scelto sotto}}
-- **On camera I am:** {{faceless con voiceover e screen recording? calm / deadpan / energico}}
+- **On camera I am:** calm, direct, a bit dry. Mix of formats: faceless screen recording with voiceover, and AI-generated presenters (always disclosed as AI when realistic)
 - **Words I actually use:** {{es. "setup", "levels", "chart", "signal"}}
 - **Words I would never say out loud:** guaranteed, sure win, get rich, financial freedom, "to the moon", buy now, sell now
 - **Do I swear:** no
 - **Emoji in captions:** {{never / one, rarely / freely}}
-- **Face on camera:** {{always / sometimes / faceless}}
-- **Voiceover or to-camera:** {{voiceover / to-camera}}
+- **Face on camera:** sometimes (AI-generated presenters), plus faceless screen recordings
+- **Voiceover or to-camera:** both: voiceover over screen recording, to-camera for AI presenters
 - **Pace:** {{words per minute, default 160}}
 
 ## My positions
@@ -51,6 +51,10 @@ Nessuna prova numerica disponibile. Non inventarla.
 
 ## The ask
 
-- **My keyword CTA, if I use one:** {{es. "iOS" per la waitlist}}
+- **My keyword CTA, if I use one:** {{es. "iOS" per la waitlist}} (finché non c'è, la CTA è "link in bio")
 - **What the keyword sends them:** {{DM con link waitlist}}
 - **Where my link goes:** {{url}}
+
+## Regole sui presentatori AI
+
+Un presentatore generato non ha una vita: non racconta trade personali, guadagni, perdite o "come ho imparato". Spiega, mostra, confronta. Il testo non dice mai "I made" o "my account" riferito a risultati.

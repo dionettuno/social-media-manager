@@ -37,6 +37,24 @@ Se non trovi evidenza solida di un trend, scrivilo e non inventarlo.
   `brand/screenshot/` usare. Se non esiste, scrivi `{{screenshot da registrare: descrizione}}`.
 - L'app oggi è solo Android. iOS è "in arrivo": mai scrivere che è già disponibile su iOS.
 
+## Materiale e fonti sull'app
+
+- Fonti ammesse per fatti sull'app: `brand/`, https://tradegpt-vector.com e la scheda Google Play.
+  Le pagine pubbliche degli asset sul sito (es. `/assets/nvda.html`) possono ispirare temi educativi.
+- Non usare le etichette "STRONG BUY / BUY" e le stime "+x% Est." del sito, né `brand/site-visuals/panel_2.webp`.
+- Non citare valutazioni, numeri di utenti o di asset marcati "da confermare" in `brand/README.md`.
+- Se mancano screenshot veri, `report.md` elenca le registrazioni schermo da fare (max 10 minuti), con istruzioni passo passo.
+
+## Formati e presentatori
+
+- Ogni settimana mescola: almeno 1 Reel faceless (screen recording + voiceover), almeno 1 con presentatore AI,
+  il terzo a scelta. Ogni script indica `FORMATO: faceless | presentatore AI | misto`.
+- Per i presentatori AI: descrivi persona, abbigliamento, ambiente e tono per lo strumento di generazione;
+  il volto è sempre dichiarato AI nel report e in caption quando realistico.
+- Nessuna storia personale, guadagno o testimonianza attribuita a un volto inventato.
+- Obiettivo della pagina: pubblico ampio e attivo (salvataggi, condivisioni, commenti), poi conversione in download.
+  Privilegia contenuti educativi da salvare e condividere; CTA verso download solo in parte dei post.
+
 ## Compliance finanza
 
 - Mai consigli di investimento, mai "compra/vendi", mai rendimenti garantiti o previsioni certe.

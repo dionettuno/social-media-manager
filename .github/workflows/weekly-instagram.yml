@@ -1,0 +1,69 @@
+name: Weekly Instagram content
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # ogni lunedì alle 07:00 UTC
+  workflow_dispatch: # avvio manuale dal tab Actions
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write # richiesto dalla action (token OIDC)
+
+concurrency:
+  group: weekly-instagram
+  cancel-in-progress: false
+
+jobs:
+  weekly-content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Data della settimana
+        run: echo "WEEK=$(date -u +%F)" >> "$GITHUB_ENV"
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          # Autenticazione con l'abbonamento Claude (token creato con `claude setup-token`)
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Alternativa a pagamento a consumo (usa UNA sola delle due):
+          # anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          # Con `--permission-mode default` ogni strumento non elencato in --allowedTools
+          # viene negato (nessun accesso fuori dalla lista).
+          claude_args: |
+            --max-turns 15
+            --permission-mode default
+            --allowedTools "Read,Glob,Grep,Skill,WebSearch,WebFetch,Write(output/**),Edit(output/**),Bash(mkdir -p output/:*),Bash(python3 .claude/skills/ig-reel/hookscore.py:*),Bash(python3 .claude/skills/ig-reel/beats.py:*),Bash(python3 .claude/skills/ig-human/humanize.py:*),Bash(python3 .claude/skills/ig-human/detect.py:*),Bash(python3 .claude/skills/ig-caption/caption.py:*),Bash(git checkout -b:*),Bash(git add output/:*),Bash(git commit:*),Bash(git push:*),Bash(gh pr create:*)"
+            --disallowedTools "Bash(git push --force:*),Bash(git push -f:*)"
+
+          prompt: |
+            Segui CLAUDE.md alla lettera. Oggi è ${{ env.WEEK }}. NON pubblicare nulla: solo file e una Pull Request.
+            Lavora in modo efficiente: raggruppa più chiamate di strumenti nello stesso turno
+            (hai pochi turni), scrivi i file in blocco e non rileggere ciò che hai appena scritto.
+
+            COMPITO SETTIMANALE
+            1. Leggi brand/README.md, voice.md, inputs/trend_links.md e le cartelle output/ delle ultime 2
+               settimane (se esistono). Non ripetere le loro idee.
+            2. Cerca sul web i trend attuali (formati, audio, temi) per Instagram Reels nella nicchia
+               trading, investimenti, analisi tecnica, crypto, fintech e strumenti AI. Usa fonti pubbliche,
+               mai login, mai Instagram diretto. Se inputs/trend_links.md ha link, usali come extra.
+               Annota fonte, URL e data di ogni trend usato.
+            3. Con /ig-plan crea il piano della settimana.
+            4. Con /ig-reel crea 3 Reel (almeno 1 faceless con screen recording, almeno 1 con presentatore AI),
+               ognuno con 3 hook valutati con hookscore.py (scarta e riscrivi quelli deboli), script,
+               testo a schermo e beat sheet (beats.py). Con /ig-carousel crea 2 caroselli. Con /ig-story
+               la sequenza di storie. Con /ig-caption la caption di ogni post.
+            5. Con /ig-reply bozze di risposte ai commenti prevedibili. Con /ig-comment 10 bozze di
+               commenti per account della nicchia.
+            6. Passa ogni testo da /ig-human prima di salvarlo. File temporanei solo in
+               output/${{ env.WEEK }}/_work/.
+            7. Salva in output/${{ env.WEEK }}/: piano.md, reel_1.md, reel_2.md, reel_3.md,
+               carousel_1.md, carousel_2.md, storie.md, risposte.md, commenti.md, report.md.
+            8. report.md in italiano: perché questi formati, trend usati con fonti, cosa manca
+               ({{segnaposto}}), registrazioni schermo da fare, checklist di pubblicazione.
+            9. Crea il branch claude/weekly-${{ env.WEEK }} (git checkout -b), aggiungi SOLO output/,
+               fai commit, push e apri la PR con `gh pr create` (titolo "Instagram week ${{ env.WEEK }}",
+               nel corpo il riassunto del report.md). Non fare merge e non pubblicare.
