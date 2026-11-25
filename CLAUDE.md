@@ -37,12 +37,26 @@ Se non trovi evidenza solida di un trend, scrivilo e non inventarlo.
   `brand/screenshot/` usare. Se non esiste, scrivi `{{screenshot da registrare: descrizione}}`.
 - L'app oggi è solo Android. iOS è "in arrivo": mai scrivere che è già disponibile su iOS.
 
+## Sicurezza (il repo è PUBBLICO)
+
+- Non scrivere MAI in nessun file, commit, PR o log: chiavi API, token, password, secret, indirizzi email o numeri di telefono
+  personali, URL con token, contenuto di variabili d'ambiente. Non leggere né stampare variabili d'ambiente o file `.env`.
+- Gli unici contatti pubblici ammessi sono quelli già pubblici dell'app (sito, scheda store). Nessun dato personale del proprietario.
+- Se trovi un segreto o un dato personale in un file (anche caricato dal proprietario), NON copiarlo: scrivi nel report
+  "possibile dato sensibile in <percorso>" e interrompi l'uso di quel file.
+- Screenshot e registrazioni in `brand/uploads/` possono mostrare email, saldi, nomi o notifiche. Se ne vedi, non usarli
+  e segnalalo in `report.md` (il proprietario deve oscurarli).
+- Non toccare `.github/`, `scripts/`, `.claude/` né i secret.
+
 ## Materiale e fonti sull'app
 
 - Fonti ammesse per fatti sull'app: `brand/`, https://tradegpt-vector.com e la scheda Google Play.
   Le pagine pubbliche degli asset sul sito (es. `/assets/nvda.html`) possono ispirare temi educativi.
 - Non usare le etichette "STRONG BUY / BUY" e le stime "+x% Est." del sito, né `brand/site-visuals/panel_2.webp`.
 - Non citare valutazioni, numeri di utenti o di asset marcati "da confermare" in `brand/README.md`.
+- Immagini ufficiali: `brand/screenshot/store_*` (store) e `brand/logo/`. Materiale del proprietario: `brand/uploads/`
+  (vedi il suo README). Dai priorità a ciò che è più recente in `brand/uploads/`, poi agli screenshot dello store.
+- Per ogni asset visivo citato indica il percorso esatto del file. Mai descrivere schermate che non esistono nei file.
 - Se mancano screenshot veri, `report.md` elenca le registrazioni schermo da fare (max 10 minuti), con istruzioni passo passo.
 
 ## Formati e presentatori

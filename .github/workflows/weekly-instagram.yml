@@ -35,6 +35,7 @@ jobs:
           # viene negato (nessun accesso fuori dalla lista).
           claude_args: |
             --max-turns 15
+            --model claude-sonnet-5-5
             --permission-mode default
             --allowedTools "Read,Glob,Grep,Skill,WebSearch,WebFetch,Write(output/**),Edit(output/**),Bash(mkdir -p output/:*),Bash(python3 .claude/skills/ig-reel/hookscore.py:*),Bash(python3 .claude/skills/ig-reel/beats.py:*),Bash(python3 .claude/skills/ig-human/humanize.py:*),Bash(python3 .claude/skills/ig-human/detect.py:*),Bash(python3 .claude/skills/ig-caption/caption.py:*),Bash(git checkout -b:*),Bash(git add output/:*),Bash(git commit:*),Bash(git push:*),Bash(gh pr create:*)"
             --disallowedTools "Bash(git push --force:*),Bash(git push -f:*)"
